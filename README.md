@@ -42,20 +42,18 @@ MAX_RESTART_ATTEMPTS=5
 WAIT_TIME_SECONDS=3600
 ```
 Usage
-    Ensure that the script's configuration variables are correctly set.
-    Open a terminal and navigate to the directory containing plex_restart.sh.
-    Run the script using the command: ./plex_restart.sh.
-    The script will check if any users are currently watching Plex using Tautulli. If no users are watching, it will restart Plex.
-    If the restart fails, the script will retry up to MAX_RESTART_ATTEMPTS times, waiting WAIT_TIME_SECONDS seconds between attempts.
-    You can monitor the script's progress and any Discord notifications to determine whether the restart was successful or failed.
+    Ensure that the script's configuration variables are correctly set.  
+    Open a terminal and navigate to the directory containing plex_restart.sh.  
+    Run the script using the command: ./plex_restart.sh.  
+    The script will check if any users are currently watching Plex using Tautulli. If no users are watching, it will restart Plex.  
+    If the restart fails, the script will retry up to MAX_RESTART_ATTEMPTS times, waiting WAIT_TIME_SECONDS seconds between attempts.  
+    You can monitor the script's progress and any Discord notifications to determine whether the restart was successful or failed.  
 
 Automation (Cron Job)
 
-To automate the script to run at specific intervals, you can set up a Cron job:
-
-    Open a terminal.
-
-    Edit your crontab file with the command:
+To automate the script to run at specific intervals, you can set up a Cron job:  
+    Open a terminal.  
+    Edit your crontab file with the command:  
 
    ```bash
 
@@ -67,9 +65,9 @@ Add the following line to schedule the script to run every Sunday at a specific 
 
     0 2 * * 0 /path/to/plex_restart.sh
 ```
-    Make sure to replace /path/to/plex_restart.sh with the actual path to your script file.
+   Make sure to replace /path/to/plex_restart.sh with the actual path to your script file.  
 
-    Save and exit the crontab editor.
+   Save and exit the crontab editor.  
 
 The script will now run automatically every Sunday at the specified time. Adjust the Cron schedule to your desired frequency and time.
 License
