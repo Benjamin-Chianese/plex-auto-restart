@@ -63,16 +63,16 @@ To automate the script to run at specific intervals, you can set up a Cron job:
 
     Edit your crontab file with the command:
 
-    bash
+   ```bash
 
 crontab -e
-
+```
 Add the following line to schedule the script to run every Sunday at a specific time (e.g., 2:00 AM):
 
-bash
+```bash
 
     0 2 * * 0 /path/to/plex_restart.sh
-
+```
     Make sure to replace /path/to/plex_restart.sh with the actual path to your script file.
 
     Save and exit the crontab editor.
@@ -82,7 +82,7 @@ License
 
 This script is provided under the MIT License. See the LICENSE file for more information.
 
-css
+```css
 
-
-This README provides clear installation instructions and usage guidelines, and you ca
+This README provides clear installation instructions and usage guidelines, and you can use it in a single document.
+```
