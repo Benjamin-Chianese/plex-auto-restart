@@ -67,6 +67,10 @@ check_users_watching() {
 }
 
 # Main program
+
+# Send a Discord message at script launch
+send_discord_message "The Plex Media Server restart script has been launched."
+
 attempt=1
 while [ $attempt -le $MAX_RESTART_ATTEMPTS ]; do
     if check_users_watching; then
@@ -80,6 +84,7 @@ while [ $attempt -le $MAX_RESTART_ATTEMPTS ]; do
     if [ $attempt -lt $MAX_RESTART_ATTEMPTS ]; then
         debug "Waiting for 1 hour before the next attempt..."
         sleep $WAIT_TIME_SECONDS  # Wait for 1 hour (3600 seconds) before the next attempt
+        send_discord_message "Attempt $attempt to restart Plex Media Server in progress..."
     fi
 
     ((attempt++))
